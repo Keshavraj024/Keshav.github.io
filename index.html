@@ -1,36 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keshavraj Ramesh Babu - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-
-            function showSection(sectionId) {
-                sections.forEach(section => {
-                    section.style.display = section.id === sectionId ? 'block' : 'none';
-                });
-            }
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    const sectionId = this.getAttribute('href').substring(1);
-                    showSection(sectionId);
-                });
-            });
-
-            // Show the first section by default
-            showSection('about');
-        });
-    </script>
-</head>
 <body>
     <div class="background">
+        <!-- Add multiple floating elements for SOLID principles and design patterns -->
         <div class="floating-text">SOLID</div>
         <div class="floating-text">Design Patterns</div>
         <div class="floating-text">C++11</div>
@@ -47,11 +17,9 @@
         <div class="floating-text">Observer</div>
         <div class="floating-text">Strategy</div>
     </div>
-    <header>
-        <h1>Keshavraj Ramesh Babu</h1>
-        <p>Software Developer | Mechatronics Engineer</p>
-    </header>
-    <nav>
+
+    <!-- Navigation bar on the top left -->
+    <nav class="sidebar">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
@@ -59,6 +27,8 @@
         <a href="#contact">Contact</a>
         <a href="#resume">Resume</a>
     </nav>
+
+    <!-- Existing content of your portfolio page -->
     <section id="about" class="about">
         <h2>About Me</h2>
         <p>Passionate software developer with a strong background in mechatronics engineering. Experienced in developing control software for autonomous mobile robots and transitioning critical components from Python to C++. Skilled in various programming languages, frameworks, and tools.</p>
@@ -124,4 +94,3 @@
         <p>&copy; 2024 Keshavraj Ramesh Babu</p>
     </footer>
 </body>
-</html>

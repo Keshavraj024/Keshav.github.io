@@ -6,18 +6,6 @@ body {
     background-color: #f4f4f9;
     color: #333;
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    position: relative;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f9;
-    color: #333;
-    scroll-behavior: smooth;
     overflow: hidden; /* Prevents scrolling when elements are out of view */
 }
 
@@ -64,48 +52,34 @@ body {
 .floating-text:nth-child(10) { --x-start: 0.1; --x-end: 0.3; }
 .floating-text:nth-child(11) { --x-start: 0.3; --x-end: 0.5; }
 .floating-text:nth-child(12) { --x-start: 0.5; --x-end: 0.7; }
+.floating-text:nth-child```css
 .floating-text:nth-child(13) { --x-start: 0.7; --x-end: 0.9; }
 .floating-text:nth-child(14) { --x-start: 0.9; --x-end: 0.1; }
 .floating-text:nth-child(15) { --x-start: 0.2; --x-end: 0.4; }
 
-header, nav, section, footer {
+header, section, footer {
     position: relative; /* Ensures content is above the background */
 }
 
-header, nav, section, footer {
-    position: relative;
-    z-index: 1;
-}
-
-header {
-    background-color: rgba(51, 51, 51, 0.9);
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
+nav.sidebar {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
     z-index: 1000;
 }
 
-header h1 {
-    margin: 0;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(68, 68, 68, 0.9);
-    padding: 0.5rem 0;
-}
-
-nav a {
+nav.sidebar a {
     color: #fff;
-    margin: 0 1rem;
     text-decoration: none;
+    margin-bottom: 0.5rem;
 }
 
-nav a:hover {
+nav.sidebar a:hover {
     text-decoration: underline;
 }
 
@@ -114,46 +88,38 @@ section {
     margin: 0 auto;
     max-width: 800px;
 }
-
 .about, .experience, .projects, .skills, .contact, .resume {
     display: none; /* Hide all sections initially */
 }
-
 .about {
     display: block; /* Show the 'About' section by default */
 }
-
 h2 {
     color: #444;
 }
-
 .project, .job {
     border: 1px solid #ddd;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #fff;
 }
-
 footer {
-    background-color: rgba(51, 51, 51, 0.9);
+    background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
 }
-
 form {
     display: flex;
     flex-direction: column;
 }
-
 form input, form textarea {
     margin-bottom: 1rem;
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-
 form button {
     padding: 0.5rem;
     border: none;
@@ -162,11 +128,9 @@ form button {
     color: #fff;
     cursor: pointer;
 }
-
 form button:hover {
     background-color: #555;
 }
-
 .resume-link {
     display: block;
     text-align: center;
@@ -177,19 +141,19 @@ form button:hover {
     border-radius: 5px;
     text-decoration: none;
 }
-
 .resume-link:hover {
     background-color: #555;
 }
-
 @media (max-width: 600px) {
     section {
         padding: 1rem;
     }
-    nav {
-        flex-direction: column;
+    nav.sidebar {
+        left: 0.5rem;
+        right: 0.5rem;
+        padding: 0.5rem;
     }
-    nav a {
-        margin: 0.5rem 0;
+    nav.sidebar a {
+        margin-bottom: 0.25rem;
     }
 }
