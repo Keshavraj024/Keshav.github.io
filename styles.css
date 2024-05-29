@@ -1,3 +1,5 @@
+/* Add the following CSS code to your existing styles.css */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -64,8 +66,8 @@ section {
     display: none; /* Hide all sections initially */
 }
 
-.about {
-    display: block; /* Show the 'About' section by default */
+#about .about {
+    display: block; /* Show the 'About' section within the #about container by default */
 }
 
 h2 {
