@@ -58,11 +58,13 @@ section {
     padding: 2rem;
     margin: 0 auto;
     max-width: 800px;
-    display: none; /* Hide all sections initially */
+    display: none;
+    /* Hide all sections initially */
 }
 
 #about {
-    display: block; /* Show the 'About' section by default */
+    display: block;
+    /* Show the 'About' section by default */
 }
 
 h2 {
@@ -144,7 +146,8 @@ form {
     flex-direction: column;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     margin-bottom: 1rem;
     padding: 0.5rem;
     border: 1px solid #ddd;
@@ -185,7 +188,8 @@ form button:hover {
         align-items: center;
     }
 
-    .left-section, .right-section {
+    .left-section,
+    .right-section {
         padding: 0;
     }
 
@@ -203,5 +207,50 @@ form button:hover {
 
     nav.sidebar a {
         margin-bottom: 0.25rem;
+    }
+}
+
+.skills {
+    padding: 2rem;
+    background-color: #f8f8f8;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skill {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.skill i {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.skill h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
     }
 }

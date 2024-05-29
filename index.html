@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keshavraj Ramesh Babu - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('section');
@@ -102,12 +104,35 @@
 
     <section id="skills" class="skills">
         <h2>Skills</h2>
-        <p><strong>Libraries & Frameworks:</strong> STL, Eigen, GTest, Boost, Catch2</p>
-        <p><strong>Programming Languages:</strong> C++ (Advanced), SQL, Python (Intermediate), JavaScript (Beginner)</p>
-        <p><strong>Technical Tools:</strong> Git, CMake, Docker, JIRA, Miro, pgModeler, Insomnia, Palanteer, Groot, PlotJuggler, JAMA, Grafana</p>
-        <p><strong>OS & Middleware:</strong> Linux, Windows</p>
-        <p><strong>Languages:</strong> English (C1), German (A1)</p>
+        <div class="skills-container">
+            <div class="skill">
+                <i class="fas fa-code"></i>
+                <h3>Programming Languages</h3>
+                <p>C++ (Advanced), SQL, Python (Intermediate), JavaScript (Beginner)</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-cogs"></i>
+                <h3>Libraries & Frameworks</h3>
+                <p>STL, Eigen, GTest, Boost, Catch2</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-tools"></i>
+                <h3>Technical Tools</h3>
+                <p>Git, CMake, Docker, JIRA, Miro, pgModeler, Insomnia, Palanteer, Groot, PlotJuggler, JAMA, Grafana</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-desktop"></i>
+                <h3>OS & Middleware</h3>
+                <p>Linux, Windows</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-language"></i>
+                <h3>Languages</h3>
+                <p>English (C1), German (A1)</p>
+            </div>
+        </div>
     </section>
+    
 
     <section id="contact" class="contact">
         <h2>Contact</h2>
