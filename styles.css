@@ -52,7 +52,6 @@ body {
 .floating-text:nth-child(10) { --x-start: 0.1; --x-end: 0.3; }
 .floating-text:nth-child(11) { --x-start: 0.3; --x-end: 0.5; }
 .floating-text:nth-child(12) { --x-start: 0.5; --x-end: 0.7; }
-.floating-text:nth-child```css
 .floating-text:nth-child(13) { --x-start: 0.7; --x-end: 0.9; }
 .floating-text:nth-child(14) { --x-start: 0.9; --x-end: 0.1; }
 .floating-text:nth-child(15) { --x-start: 0.2; --x-end: 0.4; }
