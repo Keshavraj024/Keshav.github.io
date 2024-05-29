@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keshavraj Ramesh Babu - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            function showSection(sectionId) {
+                sections.forEach(section => {
+                    section.style.display = section.id === sectionId ? 'block' : 'none';
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const sectionId = this.getAttribute('href').substring(1);
+                    showSection(sectionId);
+                });
+            });
+
+            // Show the first section by default
+            showSection('about');
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -27,6 +50,7 @@
             <li><strong>Master of Science (M.Sc.) in Mechatronics</strong>, University of Siegen, Germany (Oct 2017 – Sep 2020) - GPA: 2.1/5</li>
             <li><strong>Bachelor of Engineering (B.E.) in Mechanical Engineering</strong>, Anna University, India (Sep 2012 – Apr 2016) - GPA: 8.75/10</li>
         </ul>
+        <img src="images/A_C++_developer_proficient_in_SOLID_principles,_so.png" alt="C++ Developer">
     </section>
     <section id="experience" class="experience">
         <h2>Experience</h2>

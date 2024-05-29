@@ -40,7 +40,10 @@ section {
     max-width: 800px;
 }
 .about, .experience, .projects, .skills, .contact, .resume {
-    margin-bottom: 2rem;
+    display: none; /* Hide all sections initially */
+}
+.about {
+    display: block; /* Show the 'About' section by default */
 }
 h2 {
     color: #444;
