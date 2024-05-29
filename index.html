@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,28 +29,8 @@
         });
     </script>
 </head>
-
 <body>
-    <div class="background">
-        <!-- Add multiple floating elements for SOLID principles and design patterns -->
-        <div class="floating-text">SOLID</div>
-        <div class="floating-text">Design Patterns</div>
-        <div class="floating-text">C++11</div>
-        <div class="floating-text">C++14</div>
-        <div class="floating-text">C++17</div>
-        <div class="floating-text">C++20</div>
-        <div class="floating-text">Single Responsibility</div>
-        <div class="floating-text">Open/Closed</div>
-        <div class="floating-text">Liskov Substitution</div>
-        <div class="floating-text">Interface Segregation</div>
-        <div class="floating-text">Dependency Inversion</div>
-        <div class="floating-text">Singleton</div>
-        <div class="floating-text">Factory</div>
-        <div class="floating-text">Observer</div>
-        <div class="floating-text">Strategy</div>
-    </div>
-
-    <!-- Navigation bar on the top left -->
+    <!-- Navigation bar on the top right -->
     <nav class="sidebar">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -61,47 +40,48 @@
         <a href="#resume">Resume</a>
     </nav>
 
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Passionate software developer with a strong background in mechatronics engineering. Experienced in developing
-            control software for autonomous mobile robots and transitioning critical components from Python to C++.
-            Skilled in various programming languages, frameworks, and tools.</p>
-        <img src="images/A_C++_developer_proficient_in_SOLID_principles,_so.png" alt="C++ Developer">
-        <h3>Education</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-icon"></div>
-                <div class="timeline-content">
-                    <h3>Master of Science (M.Sc.) in Mechatronics</h3>
-                    <p>University of Siegen, Germany<br>Oct 2017 – Sep 2020</p>
-                    <p>GPA: 2.1/5</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-icon"></div>
-                <div class="timeline-content">
-                    <h3>Bachelor of Engineering (B.E.) in Mechanical Engineering</h3>
-                    <p>Anna University, India<br>Sep 2012 – Apr 2016</p>
-                    <p>GPA: 8.75/10</p>
-                </div>
-            </div>
+    <div class="container">
+        <div class="left-section">
+            <img src="images/your-photo.jpg" alt="Your Photo" class="profile-photo">
         </div>
-    </section>
+        <div class="right-section">
+            <section id="about" class="about">
+                <h2>About Me</h2>
+                <p>Passionate software developer with a strong background in mechatronics engineering. Experienced in developing control software for autonomous mobile robots and transitioning critical components from Python to C++. Skilled in various programming languages, frameworks, and tools.</p>
+                <h3>Education</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-content">
+                            <h3>Master of Science (M.Sc.) in Mechatronics</h3>
+                            <p>University of Siegen, Germany<br>Oct 2017 – Sep 2020</p>
+                            <p>GPA: 2.1/5</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-content">
+                            <h3>Bachelor of Engineering (B.E.) in Mechanical Engineering</h3>
+                            <p>Anna University, India<br>Sep 2012 – Apr 2016</p>
+                            <p>GPA: 8.75/10</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
     <section id="experience" class="experience">
         <h2>Experience</h2>
         <div class="job">
             <h3>Researcher and Developer Autonomous Systems - STTech GmbH</h3>
             <p><strong>Apr 2021 – Sep 2023 | Munich, Germany</strong></p>
             <ul>
-                <li>Contributed to the development of control software for autonomous mobile robots using C++, Python,
-                    and ROS.</li>
-                <li>Transitioned critical components from Python to C++ using the Singleton pattern, significantly
-                    boosting database performance.</li>
+                <li>Contributed to the development of control software for autonomous mobile robots using C++, Python, and ROS.</li>
+                <li>Transitioned critical components from Python to C++ using the Singleton pattern, significantly boosting database performance.</li>
                 <li>Developed multi-threaded C++ applications, reducing processing times by 70%.</li>
-                <li>Implemented an event management system emphasizing the Single Responsibility Principle for efficient
-                    event execution.</li>
-                <li>Utilized UML diagrams to visually depict class structures and system interactions, facilitating
-                    better understanding and communication.</li>
+                <li>Implemented an event management system emphasizing the Single Responsibility Principle for efficient event execution.</li>
+                <li>Utilized UML diagrams to visually depict class structures and system interactions, facilitating better understanding and communication.</li>
                 <li>Achieved 100% code coverage, demonstrating a strong commitment to software quality.</li>
                 <li>Maintained ASPICE standards, upholding high-quality software practices.</li>
             </ul>
@@ -111,22 +91,18 @@
         <h2>Projects</h2>
         <div class="project">
             <h3>Scalable Ride-Sharing and Financial Trading Platforms</h3>
-            <p>Designed scalable platforms by applying design patterns and creating detailed UML diagrams to ensure
-                robust and maintainable architecture.</p>
+            <p>Designed scalable platforms by applying design patterns and creating detailed UML diagrams to ensure robust and maintainable architecture.</p>
         </div>
         <div class="project">
             <h3>Master Thesis: Evaluation of Model-free Reinforcement Learning Algorithm for Autonomous Driving</h3>
-            <p>Trained an autonomous navigation agent using Deep Q-learning with camera and CUDA. Validated the agent’s
-                ability to navigate in unseen test tracks and optimized performance based on camera pose and field of
-                view.</p>
+            <p>Trained an autonomous navigation agent using Deep Q-learning with camera and CUDA. Validated the agent’s ability to navigate in unseen test tracks and optimized performance based on camera pose and field of view.</p>
         </div>
     </section>
     <section id="skills" class="skills">
         <h2>Skills</h2>
         <p><strong>Libraries & Frameworks:</strong> STL, Eigen, GTest, Boost, Catch2</p>
         <p><strong>Programming Languages:</strong> C++ (Advanced), SQL, Python (Intermediate), JavaScript (Beginner)</p>
-        <p><strong>Technical Tools:</strong> Git, CMake, Docker, JIRA, Miro, pgModeler, Insomnia, Palanteer, Groot,
-            PlotJuggler, JAMA, Grafana</p>
+        <p><strong>Technical Tools:</strong> Git, CMake, Docker, JIRA, Miro, pgModeler, Insomnia, Palanteer, Groot, PlotJuggler, JAMA, Grafana</p>
         <p><strong>OS & Middleware:</strong> Linux, Windows</p>
         <p><strong>Languages:</strong> English (C1), German (A1)</p>
     </section>
@@ -150,5 +126,4 @@
         <p>&copy; 2024 Keshavraj Ramesh Babu</p>
     </footer>
 </body>
-
 </html>

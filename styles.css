@@ -6,128 +6,36 @@ body {
     background-color: #f4f4f9;
     color: #333;
     scroll-behavior: smooth;
-    overflow: hidden;
-    /* Prevents scrolling when elements are out of view */
 }
 
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
 }
 
-.floating-text {
-    position: absolute;
-    font-size: 2rem;
-    color: rgba(255, 255, 255, 0.8);
-    animation: float 20s infinite;
+.left-section {
+    flex: 1;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.floating-text:nth-child(odd) {
-    animation-duration: 18s;
+.profile-photo {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 50%;
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(100vh) translateX(calc(100vw * var(--x-start)));
-    }
-
-    100% {
-        transform: translateY(-100vh) translateX(calc(100vw * var(--x-end)));
-    }
-}
-
-/* Random positions for floating elements */
-.floating-text:nth-child(1) {
-    --x-start: 0.1;
-    --x-end: 0.3;
-}
-
-.floating-text:nth-child(2) {
-    --x-start: 0.3;
-    --x-end: 0.5;
-}
-
-.floating-text:nth-child(3) {
-    --x-start: 0.5;
-    --x-end: 0.7;
-}
-
-.floating-text:nth-child(4) {
-    --x-start: 0.7;
-    --x-end: 0.9;
-}
-
-.floating-text:nth-child(5) {
-    --x-start: 0.9;
-    --x-end: 0.1;
-}
-
-.floating-text:nth-child(6) {
-    --x-start: 0.2;
-    --x-end: 0.4;
-}
-
-.floating-text:nth-child(7) {
-    --x-start: 0.4;
-    --x-end: 0.6;
-}
-
-.floating-text:nth-child(8) {
-    --x-start: 0.6;
-    --x-end: 0.8;
-}
-
-.floating-text:nth-child(9) {
-    --x-start: 0.8;
-    --x-end: 0.2;
-}
-
-.floating-text:nth-child(10) {
-    --x-start: 0.1;
-    --x-end: 0.3;
-}
-
-.floating-text:nth-child(11) {
-    --x-start: 0.3;
-    --x-end: 0.5;
-}
-
-.floating-text:nth-child(12) {
-    --x-start: 0.5;
-    --x-end: 0.7;
-}
-
-.floating-text:nth-child(13) {
-    --x-start: 0.7;
-    --x-end: 0.9;
-}
-
-.floating-text:nth-child(14) {
-    --x-start: 0.9;
-    --x-end: 0.1;
-}
-
-.floating-text:nth-child(15) {
-    --x-start: 0.2;
-    --x-end: 0.4;
-}
-
-header,
-section,
-footer {
-    position: relative;
-    /* Ensures content is above the background */
+.right-section {
+    flex: 2;
 }
 
 nav.sidebar {
     position: fixed;
     top: 1rem;
-    left: 1rem;
+    right: 1rem;
     display: flex;
     flex-direction: column;
     background-color: rgba(51, 51, 51, 0.8);
@@ -152,103 +60,16 @@ section {
     max-width: 800px;
 }
 
-.about,
-.experience,
-.projects,
-.skills,
-.contact,
-.resume {
-    display: none;
-    /* Hide all sections initially */
+.about, .experience, .projects, .skills, .contact, .resume {
+    display: none; /* Hide all sections initially */
 }
 
 .about {
-    display: block;
-    /* Show the 'About' section by default */
+    display: block; /* Show the 'About' section by default */
 }
 
 h2 {
     color: #444;
-}
-
-.project,
-.job {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    background-color: #fff;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form input,
-form textarea {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
-}
-
-.resume-link {
-    display: block;
-    text-align: center;
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.resume-link:hover {
-    background-color: #555;
-}
-
-@media (max-width: 600px) {
-    section {
-        padding: 1rem;
-    }
-
-    nav.sidebar {
-        left: 0.5rem;
-        right: 0.5rem;
-        padding: 0.5rem;
-    }
-
-    nav.sidebar a {
-        margin-bottom: 0.25rem;
-    }
-}
-
-.education {
-    background-color: #f4f4f9;
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 800px;
 }
 
 .timeline {
@@ -314,18 +135,76 @@ form button:hover {
     border-color: transparent white transparent transparent;
 }
 
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+.resume-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.resume-link:hover {
+    background-color: #555;
+}
+
 @media (max-width: 600px) {
-    .timeline:before {
-        left: 20px;
+    .container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .timeline-icon {
-        left: 12px;
+    .left-section, .right-section {
+        padding: 0;
     }
 
-    .timeline-content {
-        padding: 20px;
-        width: calc(100% - 60px);
-        box-sizing: border-box;
+    .profile-photo {
+        width: 50%;
+        max-width: 150px;
+        margin-bottom: 1rem;
+    }
+
+    nav.sidebar {
+        right: 0.5rem;
+        left: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    nav.sidebar a {
+        margin-bottom: 0.25rem;
     }
 }
