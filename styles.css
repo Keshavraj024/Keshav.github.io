@@ -6,7 +6,8 @@ body {
     background-color: #f4f4f9;
     color: #333;
     scroll-behavior: smooth;
-    overflow: hidden; /* Prevents scrolling when elements are out of view */
+    overflow: hidden;
+    /* Prevents scrolling when elements are out of view */
 }
 
 .background {
@@ -34,30 +35,93 @@ body {
     0% {
         transform: translateY(100vh) translateX(calc(100vw * var(--x-start)));
     }
+
     100% {
         transform: translateY(-100vh) translateX(calc(100vw * var(--x-end)));
     }
 }
 
 /* Random positions for floating elements */
-.floating-text:nth-child(1) { --x-start: 0.1; --x-end: 0.3; }
-.floating-text:nth-child(2) { --x-start: 0.3; --x-end: 0.5; }
-.floating-text:nth-child(3) { --x-start: 0.5; --x-end: 0.7; }
-.floating-text:nth-child(4) { --x-start: 0.7; --x-end: 0.9; }
-.floating-text:nth-child(5) { --x-start: 0.9; --x-end: 0.1; }
-.floating-text:nth-child(6) { --x-start: 0.2; --x-end: 0.4; }
-.floating-text:nth-child(7) { --x-start: 0.4; --x-end: 0.6; }
-.floating-text:nth-child(8) { --x-start: 0.6; --x-end: 0.8; }
-.floating-text:nth-child(9) { --x-start: 0.8; --x-end: 0.2; }
-.floating-text:nth-child(10) { --x-start: 0.1; --x-end: 0.3; }
-.floating-text:nth-child(11) { --x-start: 0.3; --x-end: 0.5; }
-.floating-text:nth-child(12) { --x-start: 0.5; --x-end: 0.7; }
-.floating-text:nth-child(13) { --x-start: 0.7; --x-end: 0.9; }
-.floating-text:nth-child(14) { --x-start: 0.9; --x-end: 0.1; }
-.floating-text:nth-child(15) { --x-start: 0.2; --x-end: 0.4; }
+.floating-text:nth-child(1) {
+    --x-start: 0.1;
+    --x-end: 0.3;
+}
 
-header, section, footer {
-    position: relative; /* Ensures content is above the background */
+.floating-text:nth-child(2) {
+    --x-start: 0.3;
+    --x-end: 0.5;
+}
+
+.floating-text:nth-child(3) {
+    --x-start: 0.5;
+    --x-end: 0.7;
+}
+
+.floating-text:nth-child(4) {
+    --x-start: 0.7;
+    --x-end: 0.9;
+}
+
+.floating-text:nth-child(5) {
+    --x-start: 0.9;
+    --x-end: 0.1;
+}
+
+.floating-text:nth-child(6) {
+    --x-start: 0.2;
+    --x-end: 0.4;
+}
+
+.floating-text:nth-child(7) {
+    --x-start: 0.4;
+    --x-end: 0.6;
+}
+
+.floating-text:nth-child(8) {
+    --x-start: 0.6;
+    --x-end: 0.8;
+}
+
+.floating-text:nth-child(9) {
+    --x-start: 0.8;
+    --x-end: 0.2;
+}
+
+.floating-text:nth-child(10) {
+    --x-start: 0.1;
+    --x-end: 0.3;
+}
+
+.floating-text:nth-child(11) {
+    --x-start: 0.3;
+    --x-end: 0.5;
+}
+
+.floating-text:nth-child(12) {
+    --x-start: 0.5;
+    --x-end: 0.7;
+}
+
+.floating-text:nth-child(13) {
+    --x-start: 0.7;
+    --x-end: 0.9;
+}
+
+.floating-text:nth-child(14) {
+    --x-start: 0.9;
+    --x-end: 0.1;
+}
+
+.floating-text:nth-child(15) {
+    --x-start: 0.2;
+    --x-end: 0.4;
+}
+
+header,
+section,
+footer {
+    position: relative;
+    /* Ensures content is above the background */
 }
 
 nav.sidebar {
@@ -87,38 +151,55 @@ section {
     margin: 0 auto;
     max-width: 800px;
 }
-.about, .experience, .projects, .skills, .contact, .resume {
-    display: none; /* Hide all sections initially */
+
+.about,
+.experience,
+.projects,
+.skills,
+.contact,
+.resume {
+    display: none;
+    /* Hide all sections initially */
 }
+
 .about {
-    display: block; /* Show the 'About' section by default */
+    display: block;
+    /* Show the 'About' section by default */
 }
+
 h2 {
     color: #444;
 }
-.project, .job {
+
+.project,
+.job {
     border: 1px solid #ddd;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
     background-color: #fff;
 }
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
 }
+
 form {
     display: flex;
     flex-direction: column;
 }
-form input, form textarea {
+
+form input,
+form textarea {
     margin-bottom: 1rem;
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
 form button {
     padding: 0.5rem;
     border: none;
@@ -127,9 +208,11 @@ form button {
     color: #fff;
     cursor: pointer;
 }
+
 form button:hover {
     background-color: #555;
 }
+
 .resume-link {
     display: block;
     text-align: center;
@@ -140,19 +223,109 @@ form button:hover {
     border-radius: 5px;
     text-decoration: none;
 }
+
 .resume-link:hover {
     background-color: #555;
 }
+
 @media (max-width: 600px) {
     section {
         padding: 1rem;
     }
+
     nav.sidebar {
         left: 0.5rem;
         right: 0.5rem;
         padding: 0.5rem;
     }
+
     nav.sidebar a {
         margin-bottom: 0.25rem;
+    }
+}
+
+.education {
+    background-color: #f4f4f9;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #ddd;
+    left: 30px;
+    margin: 0;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-icon {
+    width: 20px;
+    height: 20px;
+    background: #555;
+    position: absolute;
+    top: 0;
+    left: 22px;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.timeline-content {
+    padding: 10px 40px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+.timeline-content p {
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+}
+
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 15px;
+    left: -15px;
+    border-style: solid;
+    border-width: 7.5px 15px 7.5px 0;
+    border-color: transparent white transparent transparent;
+}
+
+@media (max-width: 600px) {
+    .timeline:before {
+        left: 20px;
+    }
+
+    .timeline-icon {
+        left: 12px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+        width: calc(100% - 60px);
+        box-sizing: border-box;
     }
 }
