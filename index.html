@@ -11,32 +11,53 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #f4f4f9;
+            color: #333;
         }
         header {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
         header h1 {
             margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         section {
             padding: 2rem;
             margin: 0 auto;
             max-width: 800px;
         }
-        .about, .projects, .experience, .contact {
+        .about, .experience, .projects, .skills, .contact, .resume {
             margin-bottom: 2rem;
         }
         h2 {
-            color: #333;
+            color: #444;
         }
         .project, .job {
             border: 1px solid #ddd;
             padding: 1rem;
             margin-bottom: 1rem;
             border-radius: 5px;
+            background-color: #fff;
         }
         footer {
             background-color: #333;
@@ -44,9 +65,49 @@
             text-align: center;
             padding: 1rem 0;
         }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #555;
+        }
+        .resume-link {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .resume-link:hover {
+            background-color: #555;
+        }
         @media (max-width: 600px) {
             section {
                 padding: 1rem;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 0.5rem 0;
             }
         }
     </style>
@@ -56,30 +117,24 @@
         <h1>Keshavraj Ramesh Babu</h1>
         <p>Software Developer | Mechatronics Engineer</p>
     </header>
-    <section class="about">
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="#resume">Resume</a>
+    </nav>
+    <section id="about" class="about">
         <h2>About Me</h2>
         <p>Passionate software developer with a strong background in mechatronics engineering. Experienced in developing control software for autonomous mobile robots and transitioning critical components from Python to C++. Skilled in various programming languages, frameworks, and tools.</p>
+        <h3>Education</h3>
+        <ul>
+            <li><strong>Master of Science (M.Sc.) in Mechatronics</strong>, University of Siegen, Germany (Oct 2017 – Sep 2020) - GPA: 2.1/5</li>
+            <li><strong>Bachelor of Engineering (B.E.) in Mechanical Engineering</strong>, Anna University, India (Sep 2012 – Apr 2016) - GPA: 8.75/10</li>
+        </ul>
     </section>
-    <section class="skills">
-        <h2>Skills</h2>
-        <p><strong>Libraries & Frameworks:</strong> STL, Eigen, GTest, Boost, Catch2</p>
-        <p><strong>Programming Languages:</strong> C++ (Advanced), SQL, Python (Intermediate), JavaScript (Beginner)</p>
-        <p><strong>Technical Tools:</strong> Git, CMake, Docker, JIRA, Miro, pgModeler, Insomnia, Palanteer, Groot, PlotJuggler, JAMA, Grafana</p>
-        <p><strong>OS & Middleware:</strong> Linux, Windows</p>
-        <p><strong>Languages:</strong> English (C1), German (A1)</p>
-    </section>
-    <section class="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Scalable Ride-Sharing and Financial Trading Platforms</h3>
-            <p>Designed scalable platforms by applying design patterns and creating detailed UML diagrams to ensure robust and maintainable architecture.</p>
-        </div>
-        <div class="project">
-            <h3>Master Thesis: Evaluation of Model-free Reinforcement Learning Algorithm for Autonomous Driving</h3>
-            <p>Trained an autonomous navigation agent using Deep Q-learning with camera and CUDA. Validated the agent’s ability to navigate in unseen test tracks and optimized performance based on camera pose and field of view.</p>
-        </div>
-    </section>
-    <section class="experience">
+    <section id="experience" class="experience">
         <h2>Experience</h2>
         <div class="job">
             <h3>Researcher and Developer Autonomous Systems - STTech GmbH</h3>
@@ -95,12 +150,40 @@
             </ul>
         </div>
     </section>
-    <section class="contact">
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Scalable Ride-Sharing and Financial Trading Platforms</h3>
+            <p>Designed scalable platforms by applying design patterns and creating detailed UML diagrams to ensure robust and maintainable architecture.</p>
+        </div>
+        <div class="project">
+            <h3>Master Thesis: Evaluation of Model-free Reinforcement Learning Algorithm for Autonomous Driving</h3>
+            <p>Trained an autonomous navigation agent using Deep Q-learning with camera and CUDA. Validated the agent’s ability to navigate in unseen test tracks and optimized performance based on camera pose and field of view.</p>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <p><strong>Libraries & Frameworks:</strong> STL, Eigen, GTest, Boost, Catch2</p>
+        <p><strong>Programming Languages:</strong> C++ (Advanced), SQL, Python (Intermediate), JavaScript (Beginner)</p>
+        <p><strong>Technical Tools:</strong> Git, CMake, Docker, JIRA, Miro, pgModeler, Insomnia, Palanteer, Groot, PlotJuggler, JAMA, Grafana</p>
+        <p><strong>OS & Middleware:</strong> Linux, Windows</p>
+        <p><strong>Languages:</strong> English (C1), German (A1)</p>
+    </section>
+    <section id="contact" class="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:keshavraj024@gmail.com">keshavraj024@gmail.com</a></p>
-        <p>Phone: +49-1729535327</p>
-        <p>Location: Siegen, Germany</p>
-        <p><a href="https://www.linkedin.com/in/keshavraj024">LinkedIn</a> | <a href="https://github.com/Keshavraj024">GitHub</a> | <a href="https://leetcode.com/keshav024">LeetCode</a></p>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <section id="resume" class="resume">
+        <h2>Resume</h2>
+        <a href="Cv.pdf" class="resume-link" download>Download My Resume</a>
     </section>
     <footer>
         <p>&copy; 2024 Keshavraj Ramesh Babu</p>
