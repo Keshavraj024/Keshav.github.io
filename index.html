@@ -6,29 +6,6 @@
     <title>Keshavraj Ramesh Babu - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-
-            function showSection(sectionId) {
-                sections.forEach(section => {
-                    section.style.display = section.id === sectionId ? 'block' : 'none';
-                });
-            }
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    const sectionId = this.getAttribute('href').substring(1);
-                    showSection(sectionId);
-                });
-            });
-
-            // Show the first section by default
-            showSection('about');
-        });
-    </script>
 </head>
 <body>
     <header class="header">
@@ -68,18 +45,22 @@
                 <h3>Education</h3>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-icon"></div>
+                        <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
                         <div class="timeline-content">
-                            <h3>Master of Science (M.Sc.) in Mechatronics</h3>
-                            <p>University of Siegen, Germany<br>Oct 2017 – Sep 2020</p>
+                            <h3>M.Sc. Mechatronics</h3>
+                            <p>University of Siegen, Germany</p>
+                            <p>Oct 2017 – Sep 2020</p>
                         </div>
+                        <span class="timeline-date">Oct 2017 – Sep 2020</span>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-icon"></div>
+                        <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
                         <div class="timeline-content">
-                            <h3>Bachelor of Engineering (B.E.) in Mechanical Engineering</h3>
-                            <p>Anna University, India<br>Sep 2012 – Apr 2016</p>
+                            <h3>B.E. Mechanical Engineering</h3>
+                            <p>Anna University, India</p>
+                            <p>Sep 2012 – Apr 2016</p>
                         </div>
+                        <span class="timeline-date">Sep 2012 – Apr 2016</span>
                     </div>
                 </div>
             </div>
@@ -135,7 +116,7 @@
                 <h3>OS & Middleware</h3>
                 <p>Linux, Windows</p>
             </div>
-            <div class="skill">
+            <div class=" skill">
                 <i class="fas fa-language"></i>
                 <h3>Languages</h3>
                 <p>English (C1), German (A1)</p>
