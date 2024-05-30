@@ -6,7 +6,6 @@
     <title>Keshavraj Ramesh Babu - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('section');
@@ -32,20 +31,36 @@
     </script>
 </head>
 <body>
-    <!-- Navigation bar on the top right -->
-    <nav class="sidebar">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <a href="#resume">Resume</a>
-    </nav>
-
+    <header class="header">
+        <nav class="nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="images/your-logo.png" alt="Logo">
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="intro">
+            <h1>Hi, I'm <span class="highlight">Keshavraj Ramesh Babu</span></h1>
+            <p>C++ Software Developer</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/your-profile" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </main>
     <section id="about" class="about">
         <div class="container">
             <div class="left-section">
-                <img src="images/res.jpg" alt="Your Photo" class="profile-photo">
+                <img src="images/your-photo.jpg" alt="Your Photo" class="profile-photo">
             </div>
             <div class="right-section">
                 <h2>About Me</h2>
@@ -55,14 +70,14 @@
                     <div class="timeline-item">
                         <div class="timeline-icon"></div>
                         <div class="timeline-content">
-                            <h3>M.Sc. Mechatronics</h3>
+                            <h3>Master of Science (M.Sc.) in Mechatronics</h3>
                             <p>University of Siegen, Germany<br>Oct 2017 – Sep 2020</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-icon"></div>
                         <div class="timeline-content">
-                            <h3>B.E. Mechanical Engineering</h3>
+                            <h3>Bachelor of Engineering (B.E.) in Mechanical Engineering</h3>
                             <p>Anna University, India<br>Sep 2012 – Apr 2016</p>
                         </div>
                     </div>
@@ -70,7 +85,6 @@
             </div>
         </div>
     </section>
-
     <section id="experience" class="experience">
         <h2>Experience</h2>
         <div class="job">
@@ -87,7 +101,6 @@
             </ul>
         </div>
     </section>
-
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project">
@@ -99,7 +112,6 @@
             <p>Trained an autonomous navigation agent using Deep Q-learning with camera and CUDA. Validated the agent’s ability to navigate in unseen test tracks and optimized performance based on camera pose and field of view.</p>
         </div>
     </section>
-
     <section id="skills" class="skills">
         <h2>Skills</h2>
         <div class="skills-container">
@@ -130,8 +142,6 @@
             </div>
         </div>
     </section>
-    
-
     <section id="contact" class="contact">
         <h2>Contact</h2>
         <form action="https://formspree.io/f/your-form-id" method="POST">
@@ -144,12 +154,10 @@
             <button type="submit">Send</button>
         </form>
     </section>
-
     <section id="resume" class="resume">
         <h2>Resume</h2>
         <a href="Cv.pdf" class="resume-link" download>Download My Resume</a>
     </section>
-
     <footer>
         <p>&copy; 2024 Keshavraj Ramesh Babu</p>
     </footer>
