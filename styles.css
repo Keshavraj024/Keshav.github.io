@@ -184,16 +184,17 @@ h2 {
     padding: 1rem 1.5rem;
     margin: 1rem;
     min-width: 250px; /* Minimum width for consistency */
-    max-width: 320px; /* Set a max width to ensure it doesn't overflow */
+    max-width: 450px; /* Set a max width to ensure it doesn't overflow */
     text-align: left; /* Ensure text is aligned left */
 }
 
 .timeline-content h3 {
     margin-top: 0;
-    font-size: 1.4em;
+    font-size: 1.1em;
     color: #fff;
     white-space: nowrap; /* Ensure text does not wrap */
     overflow: hidden; /* Hide overflow */
+    text-overflow: clip; /* Show full text */
 }
 
 .timeline-content p {
@@ -224,37 +225,48 @@ h2 {
     background-color: #1b1b1b;
 }
 
+.skills h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #00bfff;
+}
+
+.skill-category {
+    margin-bottom: 3rem; /* Space between categories */
+}
+
+.skill-category h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
 .skills-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    flex-direction: row; /* Ensure horizontal alignment */
 }
 
 .skill {
-    background-color: #2a2a2a;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.8rem;
 }
 
 .skill i {
     font-size: 2rem;
-    color: #fff;
+    color: #00bfff;
     margin-bottom: 0.5rem;
-}
-
-.skill h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
 }
 
 .skill p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #ddd;
+    text-align: center;
 }
 
 /* Contact Form */
